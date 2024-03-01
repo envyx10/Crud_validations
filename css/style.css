@@ -1,0 +1,318 @@
+
+/*************************************************/
+/*   Style sheet FORMS - LOGIN/CRUD/INSERCION..  */ 
+/*   Autor: Pablo Gil Diaz                       */
+/*   Version: 1.1.0                              */
+/*   comments: class project Enero 2024          */
+/*************************************************/
+
+
+/* ==========================================================================
+SECCIÓN GLOBAL / CONTAINERS
+========================================================================== */
+/* font-family: 'Raleway', sans-serif; */         
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap'); 
+
+*{ font-family: 'Lato', sans-serif;}
+
+body{background-color:#2c2c2c;}
+
+hr{border: 1px solid #3c3c3c;}
+
+.container-login{
+overflow-y: scroll;
+display:flex;
+justify-content: center;
+align-items: center;
+height: 100dvh;
+}
+
+.contenedor-padre{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+
+}
+ 
+#container-crud {
+overflow-x: auto;
+display: block;
+margin: auto;
+} 
+
+fieldset{
+padding: 20px;
+border: 2px solid #3c3c3c;
+border-radius: 15px;
+}
+
+/* ==========================================================================
+SECCIÓN LOGIN
+========================================================================== */
+
+.login {
+width: 350px;
+height: 400px;
+background: #2c2c2c;
+padding: 47px;
+padding-bottom: 57px;
+color: #fff;
+border-radius: 17px;
+padding-bottom: 50px;
+font-size: 1.3em;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+opacity: 1;
+display: block;
+border: none;
+outline: none;
+width: 91%;
+padding: 13px 18px;
+margin: 20px 0 0 0;
+font-size: 0.8em;
+border-radius: 100px;
+background: #3c3c3c;
+color: #fff;
+}
+
+.login input:focus {
+animation: bounce 1s;
+-webkit-appearance: none;
+}
+
+.login input[type=submit],
+.login input[type=button],
+.h1 {
+border: 0;
+outline: 0;
+width: 100%;
+padding: 13px;
+margin: 40px 0 0 0;
+border-radius: 500px;
+font-weight: 600;
+animation: bounce2 1.6s;
+}
+
+.h1 {
+padding: 0;
+position: relative;
+top: -9px;
+display: block;
+margin-bottom: -0px;
+font-size: 1.3em;
+}
+
+.btn-login, .add-button , .add-button-in {
+background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+color: #fff;
+padding: 16px !important;
+}
+
+.btn-login:hover {
+background: linear-gradient(144deg, #1e1e1e , 20%,#1e1e1e 50%,#1e1e1e );
+color: rgb(255, 255, 255);
+padding: 16px !important;
+cursor: pointer;
+transition: all 0.4s ease;
+}
+
+.login input[type=text] {
+animation: bounce 1s;
+-webkit-appearance: none;
+}
+
+.login input[type=password] {
+animation: bounce1 1.3s;
+}
+
+.ui{
+font-weight: bolder;
+background: -webkit-linear-gradient(#7b21ca, #535EFC, #0EC8EE);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+border-bottom: 4px solid transparent;
+border-image: linear-gradient(0.25turn, #535EFC, #0EC8EE, #0EC8EE);
+border-image-slice: 1;
+display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 70%;
+    padding: 3em;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+
+/* ==========================================================================
+SECCIÓN CRUD
+========================================================================== */
+
+caption{
+text-align: left;
+background-color: #141414;
+font-size: 2em;
+padding: 1%;
+}
+
+table {
+color: #fff;
+border-collapse: collapse;
+}
+
+
+  
+th, td {
+cursor: pointer;
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #3c3c3c;
+}
+
+tr:first-child{
+color: #fff;
+background-color: #14141457;
+}
+  
+.tr-hover:hover {background: linear-gradient(144deg, #af40ff, #5b42f3 25%, transparent 83%);}
+
+.add-button {
+  border: none;
+  display: block;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  
+  }
+
+}
+
+.btn {
+padding: 13px !important;
+margin-right: 2px;
+border: none; 
+color: #fff ;
+/* padding: 10px 8px;  */
+border-radius: 4px;
+cursor: pointer; 
+font-weight: bold;
+}
+  
+.success {background-color: #fcaa13ff;} 
+.success:hover {background-color: #141414;}
+
+.danger {background-color: #f44336;} 
+.danger:hover {background: #da190b;}
+  
+
+
+/* ==========================================================================
+SECCIÓN INSERCION
+========================================================================== */
+
+.datos input , .datos-mod input , .telefono input{ 
+color: #fff;
+opacity: 1;
+display: block;
+border: none;
+outline: none;
+width: 90%;
+padding: 13px 18px;
+margin: 16px 0 0 0;
+font-size: 0.8em;
+border-radius: 100px;
+background: #3c3c3c;
+
+}
+
+form > h2{
+color: #fff;
+}
+
+.insercion {
+color: #fff;
+max-width: 300px;
+min-width: 400px;
+margin: auto;
+padding: 20px;
+}
+
+
+.insercion > input,textarea,select{
+margin-bottom: 20px;
+}
+
+.insercion input:not([type = "submit"]):not([type ="checkbox"]):not([type="radio"]) {/* Se puede invertir el selector */
+margin-bottom: 20px;
+}
+
+
+.add-button-in{
+display: flex;
+justify-content: center;
+margin: auto;
+text-align: center;
+font-weight: bold;
+width: 40%;
+padding: 10px;
+border-radius: 20px;
+cursor: pointer;
+border: none;
+}
+
+
+/* ==========================================================================
+SECCIÓN VALIDACIONES
+========================================================================== */
+
+.form-text{
+padding-bottom: 5%;
+color:red;
+visibility: hidden;
+}
+
+.text-danger{
+color:red;
+}

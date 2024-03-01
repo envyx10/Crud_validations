@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
+    <title>Formulario de inserción</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+    <body>
+        <form class="insercion" method="post" onsubmit="return validacion(event)"> 
+            
+            <fieldset>
+                
+                <div class="datos">
+                    <div class="nombre">  
+                        <label for="">Nombre:<span class="text-danger"> *</span></label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" onchange="resetear('nombre')" value = " Ana ">
+                        <div id="nombreHelp" class="form-text">Nombre obligatorio</div>
+                        <!---->
+                        <label for="">Apellidos:<span class="text-danger"> *</span></label>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Escribe tus Apellidos" onchange="resetear('apellidos')" value = " Gómez " >
+                        <div id="apellidosHelp" class="form-text">Apellidos obligatorio</div>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="telefono">   
+                        <label for="numero" class="form-label">Telefono: <span class="text-danger"> *</span></label>
+                        <input type="text" id="numero" name="numero" placeholder="132456789" onchange="resetear('numero')" value = "132456789">
+                        <div id="numeroHelp" class="form-text">Telefono obligatorio</div>
+                    </div>
+    
+                    <hr>
+
+                    <div class="departamento"> <!-- NO ME SALE NI QUERIENDO -->
+                        <label for="dep">Selecciona un departamento:</label>
+                        <select id="dep" name="dep" onchange="resetear('dep')">
+                            <option value="0">Selecciona...</option>
+                            <option value="1" selected>Marketing</option>
+                            <option value="2">Ventas</option>
+                            <option value="3">Compras</option>
+                            <option value="4">Diseño</option>
+                            <option value="5">Programación</option>
+                        </select>
+                        <div id="depHelp" class="form-text">Departamento obligatorio</div>
+                        
+                    </div>    
+                </div>
+
+            </fieldset>
+      
+            <br>
+
+            <button type="add-button" class="add-button-in">Enviar</button>
+
+        </form>
+    </body>
+
+    <script src="./js/inserccion.js"></script>
+
+</html>

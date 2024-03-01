@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
+    <title>Formulario de inserción</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+    <body>
+        <form class="insercion" method="post" onsubmit="return validacion(event)"> 
+            
+            <fieldset>
+                
+                <div class="datos">
+
+                    <div class="nombre">  
+                        <label for="">Nombre:<span class="text-danger"> *</span></label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" onchange="resetear('nombre')">
+                        <div id="nombreHelp" class="form-text">Nombre obligatorio</div>
+                        <!---->
+                        <label for="">Apellidos:<span class="text-danger"> *</span></label>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Escribe tus Apellidos" onchange="resetear('apellidos')" >
+                        <div id="apellidosHelp" class="form-text">Apellidos obligatorio</div>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="telefono">   
+                        <label for="numero" class="form-label">Telefono: <span class="text-danger"> *</span></label>
+                        <input type="text" id="numero" name="numero" placeholder="+34 132456789" onchange="resetear('numero')" >
+                        <div id="numeroHelp" class="form-text">Telefono obligatorio</div>
+                    </div>
+    
+                    <hr>
+
+                    <div class="departamento"> <!-- NO ME SALE NI QUERIENDO -->
+                        <label for="dep">Selecciona un departamento:</label>
+                        <select id="dep" name="dep" onchange="resetear('dep')">
+                            <option value="">Selecciona...</option>
+                            <option value="ma">Marketing</option>
+                            <option value="ve">Ventas</option>
+                            <option value="co">Compras</option>
+                            <option value="di">Diseño</option>
+                            <option value="pro">Programación</option>
+                        </select>
+                        <div id="depHelp" class="form-text">Departamento obligatorio</div>
+                        
+                    </div>    
+                </div>
+
+            </fieldset>
+      
+            <br>
+
+            <button type="add-button" class="add-button-in">Enviar</button>
+
+        </form>
+    </body>
+
+    <script src="./js/inserccion.js"></script>
+
+</html>
