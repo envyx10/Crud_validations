@@ -5,7 +5,7 @@ let correcto = true; // no puede ser constante xq no varia
 
 //PATERNS
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //email
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/; // password
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,15})/; // password
 
 
 
@@ -51,4 +51,9 @@ function validatePassword(password) {
     return passwordRegex.test(password);
 }
 
-
+//Funciones para ventana pop up del Login 
+function myPopUp1() { 
+    var popup = document.getElementById("myPopup"); 
+    popup.classList.toggle("show"); 
+} 
+ 

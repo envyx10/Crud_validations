@@ -70,3 +70,8 @@ function validateNumero(numero) {
     return phonePattern.test(numero);
 }
 
+
+
+function myFunction() { 
+    confirm("Are you sure you want to delete this row?"); 
+}

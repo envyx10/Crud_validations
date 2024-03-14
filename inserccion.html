@@ -11,9 +11,9 @@
 
     <body>
         <form class="insercion" method="post" onsubmit="return validacion(event)"> 
-            
+   
             <fieldset>
-                
+                <h3>INSERCCIÓN</h3>
                 <div class="datos">
 
                     <div class="nombre">  
@@ -36,7 +36,7 @@
     
                     <hr>
 
-                    <div class="departamento"> <!-- NO ME SALE NI QUERIENDO -->
+                    <div class="departamento">
                         <label for="dep">Selecciona un departamento:</label>
                         <select id="dep" name="dep" onchange="resetear('dep')">
                             <option value="">Selecciona...</option>
@@ -46,14 +46,25 @@
                             <option value="di">Diseño</option>
                             <option value="pro">Programación</option>
                         </select>
+
                         <div id="depHelp" class="form-text">Departamento obligatorio</div>
                         
                     </div>    
                 </div>
+                
+                <hr>
+
+                <label for="">Genero ( opcional ) :<span class="text-danger"></span></label>
+                <div class="radio">
+                    <h2></h2>
+                    <input checked="" value="male" name="gender" id="male" type="radio" label="Masculino">
+                    <input value="female" name="gender" id="female" type="radio" label="Femenino">
+                    <input value="other" name="gender" id="other" type="radio" label="No se especifica">
+                </div>
 
             </fieldset>
       
-            <br>
+  
 
             <button type="add-button" class="add-button-in">Enviar</button>
 

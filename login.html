@@ -19,14 +19,21 @@
                 <form action="" method="post" onsubmit="return validacion(event)">
 
                     <div>
-                         <label for="email" class="form-label">Email: <span class="text-danger">*</span></label>
+                        <label for="email" class="form-label">Email: <span class="text-danger">*</span></label>
                         <input placeholder="Email" id="email" name="email" type="text" onchange=" resetear('email')">
-                        <div id="emailHelp" class="form-text">Formato de correo erróneo</div>
+                        <div id="emailHelp" class="form-text">Invalid email format</div>
                     </div>
                     <div>
                         <label for="password"  class="form-label">Password: <span class="text-danger">*</span></label>
                         <input placeholder="Password" id="password" name="password" type="password" onchange=" resetear('password')" >
-                        <div id="passwordHelp" class="form-text">Formato password incorrecto</div>
+                   
+                        <div id="passwordHelp" class="form-text">
+                            <p>Valid password required</p> 
+                            <div class="popup" onclick="myPopUp1()">+ Click for more info 
+                                <span class="popuptext" id="myPopup">A password should have between 8 to 15 characters, including lowercase and uppercase letters, numbers, and special characterss</span> 
+                            </div> 
+                        </div>
+                        
                     </div>
 
                     <input value="Login" class="btn-login" type="submit">
